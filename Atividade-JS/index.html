@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com JS</title>
+</head>
+<body>
+    
+    <h1>Insira dois números:</h1>
+
+    <form id="meuFormulario">
+        <label for="campoA">Campo A:</label><br>
+        <input type="number" id="campoA" name="campoA"><br><br>
+
+        <label for="campoB">Campo B:</label><br>
+        <input type="number" id="campoB" name="campoB"><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p id="mensagem"></p>
+
+    <script>
+        document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+          event.preventDefault(); // Impede o envio padrão do formulário
+    
+        let campoA = document.getElementById("campoA").value;
+        let campoB = document.getElementById("campoB").value;
+        let mensagemElement = document.getElementById("mensagem");
+    
+        if (campoB > campoA) {
+            mensagemElement.textContent = "Formulário válido! Campo B é maior que Campo A.";
+            mensagemElement.style.color = "green";
+        } else {
+            mensagemElement.textContent = "Formulário inválido! Campo B deve ser maior que Campo A.";
+            mensagemElement.style.color = "red";
+        }
+        });
+    </script>
+</body>
+</html>
