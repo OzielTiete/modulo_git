@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', 'sans-serif';
+}
+
+body {
+    background-color: #fff5e1;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    background-color: rgba(255, 210, 150, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 7px;
+    height: 30px;
+    width: 500px;
+    border: 1px solid #ccc; /* <<< adicione essa linha */
+    padding: 5px; /* opcional, para o texto não ficar colado na borda */
+}
+
+input:focus {
+    outline: none; /* tira aquela borda azul padrão do navegador */
+    border: 2px solid #8a6146; /* coloca uma borda personalizada */
+    box-shadow: 0 0 5px rgba(0,0,0,0.2); /* efeito de sombra leve */
+    transition: all 0.3s ease; /* animação suave */
+    background-color: #e6ded7 ;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px;
+    border: none; /* tira a borda preta feia */
+    border-radius: 8px;
+    background-color: #a77b5a; /* marrom claro */
+    color: #ffffff; /* texto branco */
+    font-weight: bold; /* deixa o texto mais firme */
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease; /* <<< TRANSIÇÃO MAIS PRECISA */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8a6146; /* marrom médio */
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: #7a5038; /* marrom ainda mais escuro */
+    transform: scale(0.98); /* encolhe um tiquinho pra dar sensação de clique */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* sombra menor */
+}
+
+#lista-contatos {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lista-topo, #lista-body div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.lista-topo {
+    font-weight: bold;
+    background-color: rgba(255, 210, 150, 0.4);
+}
+
+#lista-body {
+    margin-top: 20px;
+}
+
+.contato {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.contato span {
+    flex: 1;
+    text-align: center;
+}
+
+.contato span:first-child {
+    text-align: left;
+}
+
+.contato span:last-child {
+    text-align: right;
+}
+
+.linha-alternada {
+    background-color: rgba(255, 210, 150, 0.2); /* cor clarinha de fundo */
+}
+
+/* Remove as setinhas dos inputs type="number" no Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Desativa o estilo padrão do navegador */
+    margin: 0; /* Remove qualquer margem que possa estar aplicada */
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.acoes span {
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.acoes span:hover {
+    transform: scale(1.2);
+}
